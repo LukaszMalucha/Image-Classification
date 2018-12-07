@@ -12,6 +12,7 @@ from flask_uploads import UploadSet, configure_uploads, IMAGES
 
 from skimage.io import imread
 from skimage.transform import resize
+from scipy.misc import imsave, imread, imresize
 
 import requests
 import subprocess
@@ -23,7 +24,7 @@ import h5py
 from keras.models import load_model 
 from keras import backend as K
 import tensorflow as tf
-from scipy.misc import imsave, imread, imresize
+
 
 from digit_identifier import load
 
@@ -225,4 +226,4 @@ def error500(error):
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
     port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port, debug=True)     
+    app.run(host='0.0.0.0', port=port, debug=False)     
