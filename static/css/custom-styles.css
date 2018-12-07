@@ -380,6 +380,12 @@ h2 {
     border: 1px solid  #C0C0C0;
 }
 
+#cat_dog {
+    min-height: 300px;
+    min-width: 500px;
+    padding: 20px;
+}
+
 
 /*------------------------------------------------------------------------------
     EDIT & ADD FORMS + TABLE    
