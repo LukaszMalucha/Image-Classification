@@ -1,18 +1,22 @@
 ################################################################## App Utilities
 import os
 from flask_bootstrap import Bootstrap
-from flask import Flask, render_template, request, redirect, url_for, Response
+from flask import Flask, Response, render_template, current_app, request, redirect, url_for, flash
 from flask_restful import Api, Resource
+from flask_uploads import UploadSet, configure_uploads, IMAGES
 
-import numpy
-import tensorflow as tf
+from skimage.io import imread
+from skimage.transform import resize
+
 import requests
 import subprocess
 import json
 
-
-
-
+import numpy as np
+import keras
+import h5py
+from keras.models import load_model   
+import tensorflow as tf
 
 
 
@@ -24,13 +28,17 @@ app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
 Bootstrap(app)
 api = Api(app)
 
+photos = UploadSet('photos', IMAGES)                                            ## image upload handling
+app.config['UPLOADED_PHOTOS_DEST'] = 'static/uploads'
+configure_uploads(app, photos)
+ALLOWED_EXTENSIONS = set(['jpg'])  ## For cat vs dog classifier only
 
 
 
 ###################################################################### RESOURCES ##############################################################
 
 
-class Classify(Resource):
+class ImageRecognition(Resource):
     def post(self):
         
         ## Get the Image URL
@@ -65,10 +73,19 @@ class Classify(Resource):
         
         
         return Response(render_template('classify.html', retJson=retJson, url = url, warning = warning, mimetype='text/html'))
+        
+        
+class CatDogClassify(Resource):
+    def post(self):
+        pass
+        
+
+        
+        
 
 
-api.add_resource(Classify, '/classify')
-
+api.add_resource(ImageRecognition, '/classify')
+api.add_resource(CatDogClassify, '/cat_dog_classifier')
 
 
 
@@ -100,6 +117,9 @@ def classify_image():
 def cat_dog_classifier():
     
     return render_template("cat_dog_classifier.html")
+    
+    
+    
     
     
     
