@@ -376,6 +376,10 @@ h2 {
     background-color: white;
 }
 
+#digit {
+    border: 1px solid  #C0C0C0;
+}
+
 
 /*------------------------------------------------------------------------------
     EDIT & ADD FORMS + TABLE    

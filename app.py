@@ -1,5 +1,9 @@
 ################################################################## App Utilities
 import os
+import base64
+import re
+import sys
+
 from flask_bootstrap import Bootstrap
 from flask import Flask, Response, render_template, current_app, request, redirect, url_for, flash
 from flask_restful import Api, Resource
@@ -15,8 +19,12 @@ import json
 import numpy as np
 import keras
 import h5py
-from keras.models import load_model   
+from keras.models import load_model 
+from keras import backend as K
 import tensorflow as tf
+from scipy.misc import imsave, imread, imresize
+
+from digit_identifier import load
 
 
 
@@ -34,11 +42,22 @@ configure_uploads(app, photos)
 ALLOWED_EXTENSIONS = set(['jpg'])  ## For cat vs dog classifier only
 
 
+## Digit Recognition
+sys.path.append(os.path.abspath(",/digit_identifier"))
+global model, graph
+
 ## DEFINE ALLOWED TEMPLATE FILE FORMAT ##############################################   
     
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS    
+           
+           
+## Image Converter from str to b64
+def convertImage(imgData1):
+	imgstr = re.search(b'base64,(.*)',imgData1).group(1)
+	with open('output.png','wb') as output:
+            output.write(base64.b64decode(imgstr))           
 
 
 
@@ -108,10 +127,40 @@ class CatDogClassify(Resource):
                 return Response(render_template('cat_dog_classifier.html', warning = "Wrong Image Format"))    
 
      
+     
+     
+class DigitClassify(Resource):
+    def post(self):
+        
+        K.clear_session()   ## Add, otherwise you'll get an input shape error
+        model, graph = load.init()
+        
+        imgData = request.get_data()
+        
+        ## transform
+        convertImage(imgData)
+        x = imread('output.png', mode = 'L')
+        x = np.invert(x)
+        x = imresize(x,(28,28))
+        x = x.reshape(1, 28, 28, 1)
+        ## predict
+        with graph.as_default():
+            out = model.predict(x)
+            print(np.argmax(out,axis=1))
+            response = np.array_str(np.argmax(out, axis=1))
+            response = ' '.join(map(str, response))
+            response = response.replace('[', '')
+            response = response.replace(']', '')
+        return response
+        
+        
+        
+        
 
 
 api.add_resource(ImageRecognition, '/classify')
 api.add_resource(CatDogClassify, '/catdogclassify')
+api.add_resource(DigitClassify, '/digitclassify')
 
 
 
@@ -143,6 +192,15 @@ def classify_image():
 def cat_dog_classifier():
     
     return render_template("cat_dog_classifier.html")
+    
+    
+@app.route('/digit_recognition')
+def digit_recognition():
+    
+    
+
+    
+    return render_template("digit_recognition.html")
     
     
     
