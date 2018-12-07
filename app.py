@@ -65,7 +65,7 @@ def convertImage(imgData1):
 ###################################################################### RESOURCES ##############################################################
 
 
-class ImageRecognition(Resource):
+class ImageClassify(Resource):
     def post(self):
         
         ## Get the Image URL
@@ -99,7 +99,7 @@ class ImageRecognition(Resource):
 
         
         
-        return Response(render_template('classify.html', retJson=retJson, url = url, warning = warning, mimetype='text/html'))
+        return Response(render_template('imageclassify.html', retJson=retJson, url = url, warning = warning, mimetype='text/html'))
         
         
 class CatDogClassify(Resource):
@@ -159,7 +159,7 @@ class DigitClassify(Resource):
         
 
 
-api.add_resource(ImageRecognition, '/classify')
+api.add_resource(ImageClassify, '/imageclassify')
 api.add_resource(CatDogClassify, '/catdogclassify')
 api.add_resource(DigitClassify, '/digitclassify')
 
