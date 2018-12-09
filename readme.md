@@ -22,6 +22,8 @@ Third one, Digit Recognition, receives input via js.
 Application of Google-made image content classifier built with Tensorflow. Training this kind of model in home conditions would took an eternity, that's why it was downloaded from 
 [official website](https://www.tensorflow.org/tutorials/images/image_recognition). Model accuracy is amazing.
 
+*(Heroku-hosted app works only with small photos with white background due to limited memory, works perfect on local hosts)*
+
 <br>
 
 ![11](https://user-images.githubusercontent.com/26208598/49669686-06082d80-fa5a-11e8-95d5-65dd79adc156.PNG)

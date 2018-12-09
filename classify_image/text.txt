@@ -1,0 +1,1 @@
+{"parachute, chute": 0.17020943760871887, "bulletproof vest": 0.07518581300973892, "assault rifle, assault gun": 0.06211771070957184, "gasmask, respirator, gas helmet": 0.05726673826575279, "knee pad": 0.05254136398434639}
