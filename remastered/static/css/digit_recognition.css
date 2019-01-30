@@ -169,12 +169,17 @@ h2 {
 #navigation {
     width: 10%;
     height: 45px;
-}
-
-#navigation a {
+    padding: 10px;
     font-size: 14px;
+    background-color: #1a2026;
 }
 
+#navigation:hover,
+#navigation:active,
+#navigation:focus {
+    color: #1a2026;
+    background-color: white;
+}
 /*------------------------------------------------------------------------------
     EDIT & ADD FORMS + TABLE
 ------------------------------------------------------------------------------*/

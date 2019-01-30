@@ -25,7 +25,7 @@ Bootstrap(app)
 ## Image upload handling - Cat & Dog Classifier
 photos = UploadSet('photos', IMAGES)                                            ## image upload handling
 configure_uploads(app, photos)
-ALLOWED_EXTENSIONS = set(['jpg'])
+
 
 
 

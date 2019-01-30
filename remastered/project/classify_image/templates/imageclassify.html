@@ -1,0 +1,103 @@
+{% extends 'base.html' %} {% block styles %} {{super()}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script> {% endblock %} {% block content %}
+<div class="card" id="main_card">
+    <br>
+    <br>
+    <br>
+    <div class="row">
+                <div class="col-md-3 text-center">
+        </div>
+
+        <div class="col-md-6 text-center">
+            <div class="card" id="plot">
+                
+            {% if warning %}
+            <div class="row text-center">
+            <h5 style="color: red">{{ warning }} </h5>
+            </div>
+            {% endif %}
+            
+            <canvas id="predictionChart"></canvas>
+            </div>
+        </div>
+        <div class="col-md-3 text-center">
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row text-center">
+    <div class="row text-center">
+        <a href="{{ url_for('dashboard') }}" class="waves-effect waves-light btn" id="navigation">Back to Main Page</a>
+    </div>
+    </div>
+</div>
+
+
+
+<script>
+var pcx = document.getElementById('predictionChart').getContext('2d');
+var providersChart = new Chart(pcx, {
+    // The type of chart we want to create
+    type: 'horizontalBar',
+    // The data for our dataset
+    data: {
+        labels: [{% for key, value in retJson.items() %}
+                    "{{key}}",
+                {% endfor %}],
+        datasets: [{
+            label: 'Courses',
+            data: [{% for key, value in retJson.items() %}
+                    "{{value}}",
+                   {% endfor %}],
+            backgroundColor: [
+            '#4e79a7',    // color for data at index 0
+            '#f28e2b',   // color for data at index 1
+            '#e15759',  // color for data at index 2
+            '#76b7b2', // color for data at index 3
+            '#59a14f', // color for data at index 3
+            '#b07aa1', // color for data at index 3
+            //...
+        ],
+        }]
+    },
+    // Configuration options go here
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        legend: { display: false },
+        title: {
+        fontSize: 16,
+        fontColor: 'black',
+        display: true,
+        text: 'Algorithm Predictions (% Probability)'
+        },
+        scales: {
+            
+        xAxes: [{
+                gridLines: {
+                    color: "rgba(0, 0, 0, 0)",
+                },
+                ticks: {
+                fontSize: 10,
+                suggestedMin: 0,    // minimum will be 0, unless there is a lower value.
+                // OR //
+                beginAtZero: true   // minimum value will be 0.
+                }
+            }],      
+        yAxes: [{
+            display: true,
+            gridLines: {
+                    color: "rgba(0, 0, 0, 0)",
+                },
+            ticks: {
+                suggestedMin: 0,    // minimum will be 0, unless there is a lower value.
+                // OR //
+                beginAtZero: true   // minimum value will be 0.
+            }
+        }]
+    }
+    }
+});
+</script>
+
+{% endblock %}

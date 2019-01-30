@@ -1,10 +1,11 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} {% block styles %} {{super()}}
+<link href="{{url_for('static', filename='css/cat_dog_classifier.css')}}" rel="stylesheet" /> {% endblock %} {% block content %}
 <div class="card text-center" id="main_card">
     <br><br><br>
     <div class="row">
         <div class="row text-center">
-            <div class=" col-md-4 text-left"></div>
-            <div class="col-md-4 text-center">
+            <div class=" col-md-3 text-left"></div>
+            <div class="col-md-6 text-center">
                 <div class="card text-center" id="cat_dog">
                     {% if guess == "Cat" %}
                     <img src="{{url_for('static', filename='img/cat.png')}}">
@@ -15,20 +16,19 @@
                     <h1>I predict it's a {{ guess }}</h1>
                 </div>
             </div>
-            <div class=" col-md-4 text-left"></div>
+            <div class=" col-md-3 text-left"></div>
         </div>
     </div>
     
     <br>
-    <div class="row">
-        <div class="row text-center">
-            <div class=" col-md-5 text-left"></div>
-            <div class="col-md-2 text-center">
+    <div class="row text-center">
+        <div class="col-md-5 text-left"></div>
+        <div class="col-md-2 text-left">
 
-                <a href="{{ url_for('cat_dog_classifier') }}" class="waves-effect waves-light btn-large" style="margin: 0 auto;" id="add">Back to Classifier</a>
-            </div>
-            <div class=" col-md-5 text-left"></div>
+            <a href="{{ url_for('cat_dog_classifier.classifier') }}" class="btn" id="navigation">Back to Classifier</a>
+
         </div>
+        <div class="col-md-5 text-left"></div>
     </div>
 </div>
 
