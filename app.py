@@ -181,6 +181,10 @@ api.add_resource(DigitClassify, '/digitclassify')
 @app.route('/dashboard')
 def dashboard():
     
+    # for r in range(6):
+    #     for c in range(6):
+    #         pass
+    
     return render_template("dashboard.html")
     
 

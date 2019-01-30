@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>A.I. Sommelier</title>
+    <!-- Material Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Materialize-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- FontAwesome Styles-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous"></script>
+    <!-- Custom Styles-->
+    <link href="{{url_for('static', filename='css/custom-styles.css')}}" rel="stylesheet" />
+    <link href="{{url_for('static', filename='css/navbar.css')}}" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Playball|Just+Another+Hand|Merienda+One|Alex+Brush" rel="stylesheet">
+    <!-- Chart Js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+</head>
+
+
+
+<body>
+    <!-- WRAPPER -->
+    <div id="wrapper">
+
+
+         <!-- TOP NAVBAR -->
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand waves-effect waves-dark" href="{{url_for('home')}}"><i class="fas fa-images"></i><strong> Image Recognition</strong></a>
+            </div>
+            <ul class="nav navbar-top-links navbar-right">
+                <a class='dropdown-trigger' href='#' data-target='dropdown1' id="user_dropdown"><i class="fa fa-user fa-fw" id="top_icon" style="color: #d6d5d5"></i> <b>{{ current_user }}</b></a>
+            </ul>
+
+
+        </nav>
+
+                <!-- DROPDOWN -->
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="{{ url_for('userlogin') }}" id="dropdown_link"><i class="fa fa-user fa-fw" style="color: #d6d5d5"></i> Log In</a>
+            </li>
+            <li><a href="{{ url_for('userlogout') }}" id="dropdown_link"><i class="fas fa-sign-out-alt" style="color: #d6d5d5"></i> Log Out</a>
+            </li>
+            <li><a href="{{ url_for('userregister') }}" id="dropdown_link"><i class="fas fa-tasks" style="color: #d6d5d5"></i> Sign In</a>
+            </li>
+        </ul>
+
+        <!--/. TOP NAVBAR ****************************************************************************************************************************************************************************************** -->
+
+        <!-- PAGE-WRAPPER -->
+        <div id="page-wrapper">
+            <!-- PAGE-INDEX -->
+            <div id="page-index">
+                <div class="dashboard-cards">
+                    {% block content %} {% endblock %}
+
+
+
+
+
+                </div>
+
+            </div>
+            <!-- PAGE-INDEX -->
+
+        </div>
+
+        <!-- PAGE-WRAPPER -->
+
+    </div>
+    <!-- WRAPPER -->
+
+            <!-- jQuery Js -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Bootstrap Js -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+        <!-- Materialize Js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+
+
+        <script src="{{url_for('static', filename='js/dataTables/jquery.dataTables.js')}}"></script>
+        <script src="{{url_for('static', filename='js/dataTables/dataTables.bootstrap.js')}}"></script>
+        <script>
+            $(document).ready(function() {
+                $('#dataTables-example').dataTable();
+            });
+        </script>
+        <script>
+            $('.dropdown-trigger').dropdown();
+        </script>
+
+</body>
+
+</html>

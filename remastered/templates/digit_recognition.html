@@ -1,0 +1,150 @@
+{% extends 'base.html' %} {% block content %}
+<div class="card text-center" id="main_card">
+
+    <div class="row">
+        <div class="col-md-3 text-center"></div>
+        <div class="col-md-6 text-center">
+            <div class="card text-center" id="digit">
+                <div class="row">
+                    <div class="col-md-2 text-center"></div>
+                    <div class="col-md-8 text-center">
+                        <br>
+                        <h2>Draw a Digit</h2>
+                    </div>
+                    <div class="col-md-2 text-center"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 text-center">
+                    <div class="row">    
+                        <div id="buttons" style="margin-left:10px">
+                            <input type="button" id="clear" value="Clear Canvas" style="width: 80%">
+                        </div>
+                    </div>    
+                    
+                    </div>
+                    
+                    <div class="col-md-8 text-center">
+                        <canvas id="canvas" width="500" height="500" style="background:black"></canvas>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <div class="row">  
+                        <div id="buttons" style="margin-right:10px">
+                        <input id="download" type="button" style="display: inline-block;" style="width: 80%" value="Download Img">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-2 text-center">
+
+                    </div>
+                    <div class="col-md-8 text-center">
+                        
+                    </div>
+                    <div class="col-md-2 text-center"></div>
+
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-2 text-center"></div>
+                    <div class="col-md-8 text-center">
+                    <a id="digitclassify" class="waves-effect waves-light btn-large" style="display: inline-block;">Predict</a>	
+                    </div>
+                    <div class="col-md-2 text-center"></div>
+                </div>    
+                <div class="row text-center">
+                    <div class="col-md-2 text-center"></div>
+                    <div class="col-md-8 text-center">
+                    <h2>You draw:</h2>
+                    <h1 id="result"><span> </span></h1>
+                    <div class="col-md-2 text-center"></div>
+                </div> 
+               
+            </div>
+            
+
+        </div>
+    </div>
+    </div>
+        <div class="col-md-3 text-center"></div>
+    </div>
+
+    <div class="row text-center">
+        <div class="col-md-2 text-center"></div>
+        <div class="col-md-8 text-center">
+            <a href="{{url_for('dashboard')}}" class="waves-effect waves-light btn-large">Back to Main Page</a>
+        </div>
+        <div class="col-md-2 text-center"></div>
+    </div>
+
+<script type="text/javascript">
+    var md = false;
+    var canvas = document.getElementById('canvas');
+    canvas.addEventListener('mousedown', down);
+    canvas.addEventListener('mouseup', toggledraw);
+    canvas.addEventListener('mousemove',
+        function(evt) {
+            var mousePos = getMousePos(canvas, evt);
+            var posx = mousePos.x;
+            var posy = mousePos.y;
+            draw(canvas, posx, posy);
+        });
+
+
+    function down() {
+        md = true;
+    }
+
+    function toggledraw() {
+        md = false;
+        canvas.style.cursor = "default";
+    }
+
+    function getMousePos(canvas, evt) {
+        var rect = canvas.getBoundingClientRect();
+        return {
+            x: evt.clientX - rect.left,
+            y: evt.clientY - rect.top
+        };
+    }
+
+    function draw(canvas, posx, posy) {
+        var context = canvas.getContext('2d');
+            context.fillStyle="white";
+
+        if (md) {
+            canvas.style.cursor = "pointer"
+            context.fillRect(posx, posy, 40, 40);
+            
+            
+        }
+        document.getElementById('clear').addEventListener('click', function() {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+        }, false);
+
+    }
+    document.getElementById('download').addEventListener('click', function() {
+        downloadCanvas(this, 'canvas', 'test.png');
+    }, false);
+
+    function downloadCanvas(link, canvasId, filename) {
+        var canvas = document.getElementById(canvasId);
+        canvas.toBlob(function(blob) {
+            saveAs(blob, "digit.png");
+        });
+    }
+    $("#digitclassify").click(function(){
+       		var $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+       		var canvasObj = document.getElementById("canvas");
+       		var img = canvasObj.toDataURL();
+       		$.ajax({
+       			type: "POST",
+       			url: $SCRIPT_ROOT + "/digitclassify",
+       			data: img,
+       			success: function(data){
+       				$('#result').text(data);
+       			}
+       		});
+       	});    
+</script>
+
+{% endblock %}

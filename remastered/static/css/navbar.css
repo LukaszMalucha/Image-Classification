@@ -1,0 +1,235 @@
+/*------------------------------------------------------------------------------
+    TOP NAVBAR
+------------------------------------------------------------------------------*/
+
+
+.top-navbar {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 300;
+    border: none;
+    padding-right: 0;
+    padding-left: 39%;
+    height: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.top-navbar .navbar-brand {
+    height: 40px;
+    margin:0px;
+    width: 400px;
+    text-align: left;
+    padding: 0px;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: white;
+    background: transparent;
+}
+
+
+.navbar-brand i.large.material-icons {
+    float: left;
+    font-size: 3rem;
+    margin-right: 20px;
+    line-height: 1;
+}
+
+.top-navbar .navbar-right {
+    width: 9%;
+    height: 40px;
+    margin: 0px;
+    line-height: 1;
+    padding: 10px 0px 10px 0px;
+}
+
+.top-navbar .navbar-right>a {
+    padding: 0px;
+    font-size: 18px;
+}
+
+.top-navbar .navbar-right>a>i {
+    margin-right: 5px;
+    font-size: 20px;
+    height: 20px;
+}
+
+
+
+.dropdown-content {
+    width: 150px !important;
+    right: -50px !important;
+    top: 60px !important;
+
+}
+
+.dropdown-content li>a {
+    font-size: 14px;
+    text-decoration: none;
+}
+.dropdown-content li>a>i {
+    margin-right: 12px;
+    font-size: 18px;
+}
+
+
+.dropdown-content li>fa {
+    font-size: 16px;
+
+}
+
+
+/* Hovers and Focuses --------------------------------------------------------*/
+
+.navbar-right>a:hover,
+.navbar-right>a:focus {
+    text-decoration: none;
+    outline: 0px;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    background-color: transparent;
+    outline: 0px;
+}
+
+
+nav ul a:hover {
+    background-color: #fff;
+}
+
+
+/*------------------------------------------------------------------------------
+    Colors
+------------------------------------------------------------------------------*/
+
+.top-navbar {
+    background:  #1a2026;
+}
+
+.navbar-brand i.large.material-icons {
+    color: white;
+}
+
+
+.dropdown-content {
+    background-color: #1a2026;
+}
+
+.dropdown-content li>a {
+    color: white;
+}
+
+.dropdown-content li>fa {
+    color: white;
+}
+
+
+.navbar-right>a:hover,
+.navbar-right>a:focus {
+    background: transparent;
+    color: #d6d5d5;
+}
+
+.navbar-default .navbar-brand:hover
+.navbar-default .navbar-brand:focus {
+    color: #d6d5d5;
+}
+
+ nav ul a:hover {
+     color: black;
+ }
+
+ .navbar-default .navbar-brand:hover {
+    color: #d6d5d5;
+ }
+
+
+/*------------------------------------------------------------------------------
+    MEDIA QUERIES
+------------------------------------------------------------------------------*/
+
+@media(max-width:1810px) {
+   .top-navbar .navbar-right {
+        width: 15%;
+   }
+}
+
+
+@media(max-width:952px) {
+    .top-navbar {
+        margin: 0px;
+        padding:10px;
+        height:40px;
+    }
+
+    .top-navbar .navbar-header{
+        width: 50%
+    }
+
+    .top-navbar .navbar-brand {
+        font-size:  3rem;
+    }
+
+    .navbar-brand i.large.material-icons {
+        font-size: 40px;
+    }
+
+
+   .top-navbar .navbar-right {
+        position: absolute;
+        top: 10px;
+        left: 80%;
+        font-size: 2rem;
+        width: 30%;
+
+    }
+
+    .dropdown-content {
+        margin-top: -10px;
+    }
+
+
+}
+
+
+@media(max-width:415px) {
+
+
+    .top-navbar .navbar-brand {
+        height: 40px;
+        width: 220px;
+        font-size:  2rem;
+        padding: 5px;
+
+    }
+
+    .navbar-brand i.large.material-icons {
+        font-size:  2rem;
+
+    }
+
+    .top-navbar .navbar-right {
+        position: absolute;
+        top: 5px;
+        left: 75%;
+        font-size: 2rem;
+        width: 30%;
+
+    }
+
+    .dropdown-content {
+        margin-top: -15px;
+        left: -22px;
+
+    }
+
+    .dropdown-content li > a {
+        font-size: 12px;
+    }
+
+}
+
+

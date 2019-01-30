@@ -1,0 +1,488 @@
+/*------------------------------------------------------------------------------
+    MAIN  STYLES    
+------------------------------------------------------------------------------*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    margin: 0;
+    padding-bottom: 0;
+    min-height: 100%;
+    background-image: url('../../static/img/background.png');
+    background-size: cover;
+
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+
+}
+
+
+#wrapper {
+    width: 100%;
+
+}
+
+#page-wrapper {
+    position: relative;
+    top: 55px;
+    -moz-box-shadow: 0 0 10px #757575;
+
+}
+
+#page-index {
+    width: 100%;
+    margin: 10px 20px 10px 0px;
+    padding: 15px 30px;
+    padding-left: 15%;
+    padding-right: 15%;
+
+}
+
+#page-index a {
+    text-decoration: none;
+    outline: 0;
+    /*font-size: 10px;*/
+}
+
+.text-center {
+    text-align: center;
+}
+
+.btn {
+    color: white;
+    background-color: #822118;
+    border: none;
+    width: 200px;
+    margin: 0;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.btn {
+    line-height: 25px;
+}
+
+
+.btn:hover,
+.btn:focus {
+    background-color: #812017;
+    color: white;
+}
+
+
+#text {
+    color: black;
+}
+
+
+label {
+    margin-left: 30px;
+    font-weight: normal;
+    color: black;
+    font-size: 12px;
+}
+
+
+/*------------------------------------------------------------------------------
+    DASHBOARD CARDS    
+------------------------------------------------------------------------------*/
+
+#main_card {
+    vertical-align: middle;
+    border-width: 3px;
+    padding: 20px;
+    box-shadow: none;
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+
+#main_card h1 {
+    color: #323b43;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+
+h2 {
+    color: black;
+    font-size: 20px;
+    margin: 5px;
+}
+
+#main_card h4 {
+    color: black;
+    margin: 5px;
+}
+
+#main_card h5 {
+    color: black;
+    font-size: 12px;
+    color: #4b5964;
+    margin: 5px;
+}
+
+
+#dashboard_card {
+    float: left;
+    height: 240px;
+    width: 240px;
+    margin-left: 40px;
+    border: 1px solid #C0C0C0;
+    padding: 0px;
+
+}
+
+.card .card-image .card-title {
+    color: black;
+}
+
+.card .card-image img {
+    border-bottom: 1px solid #DCDCDC;
+}
+
+#menu-card {
+    box-shadow: 0 3px 3px 0 #A9A9A9, 0 3px 1px -2px #A9A9A9, 0 1px 5px 0 #A9A9A9;
+    margin-right: 50px;
+}
+
+
+#menu-card:hover {
+    box-shadow: 0 2px 2px 0 #2d4b65, 0 3px 1px -2px #2d4b65, 0 1px 5px 0 #2d4b65;
+    bottom: -3px;
+    cursor: pointer;
+}
+
+
+.card .card-content .card-title {
+    color: #2d4b65;
+    font-weight: bold;
+}
+
+.card .card-content p {
+    color: black;
+}
+
+
+#form-card {
+    vertical-align: middle;
+    border-width: 3px;
+    border-radius: 10px;
+    padding: 10px;
+    background-image: linear-gradient(to bottom right, #fafafa, white);
+    min-height: 240px;
+}
+
+#form-card h3 {
+    font-weight: bold;
+}
+
+#plot {
+    background-color: white;
+    border-style: solid;
+    border-color: #848484;
+    border-radius: 5px;
+    vertical-align: middle;
+    padding: 20px;
+    margin: 0px;
+    height: 506px;
+    width: 506px;
+    padding: 0px;
+}
+
+#prediction-image-card {
+    margin: 10px;
+    background-color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    
+}
+
+.btn-large {
+    background-color: #2d4b65;
+}
+
+.btn-large:hover {
+    color: #2d4b65;
+    background-color: white;
+}
+
+#digit {
+    border: 1px solid  #C0C0C0;
+}
+
+#cat_dog {
+    min-height: 300px;
+    min-width: 500px;
+    padding: 20px;
+}
+
+
+/*------------------------------------------------------------------------------
+    EDIT & ADD FORMS + TABLE    
+------------------------------------------------------------------------------*/
+
+input[type=text],
+select,
+textarea {
+    width: 90%;
+    height: 50px;
+    padding: 12px;
+    border-radius: 10px;
+    border-color: #f2f2f2;
+    box-sizing: border-box;
+    margin: 0px 50px 0px 15px;
+    resize: vertical;
+    background-color: #f2f2f2;
+    color: white;
+}
+
+input[type="number"]:focus:not([readonly]) {
+    border-bottom: 1px solid black;
+    box-shadow: 0 1px 0 0 black;
+}
+
+input[type="number"].valid,
+input[type="number"]:focus.valid {
+    border-bottom: 1px solid #8B0000;
+    box-shadow: 0 1px 0 0 #8B0000;
+}
+
+th,
+td,
+tr {
+    color: black;
+    height: 36px;
+    padding-left: 5px;
+    font-size: 12px
+}
+
+textarea.materialize-textarea {
+    color: black;
+}
+
+.select-wrapper input.select-dropdown {
+    color: black;
+}
+
+input[type="text"]:not(.browser-default) {
+    color: black;
+}
+
+input[type="text"],
+input[type="number"] {
+    text-align: center;
+}
+
+[type="radio"]:checked+span::after,
+[type="radio"].with-gap:checked+span::after {
+    background-color: #29abe2 !important;
+}
+
+[type="radio"]:checked+span::after,
+[type="radio"].with-gap:checked+span::before,
+[type="radio"].with-gap:checked+span::after {
+    border: 2px solid #29abe2;
+}
+
+
+.table-bordered>tbody>tr>td {
+    border-left: 1px solid #ddd;
+    border-right-color: transparent;
+}
+
+/*------------------------------------------------------------------------------
+    MEDIA QUERIES     
+------------------------------------------------------------------------------*/
+
+/* MIN WIDTHS ----------------------------------------------------------------*/
+
+@media(min-width:1811px) {
+    #page-index {
+        min-height: 1000px;
+    }
+    #page-selection {
+        min-height: 1400px;
+    }
+    #page-algorithm {
+        min-height: 1600px;
+    }
+    #page-projects {
+        min-height: 1400px;
+    }
+}
+
+@media(min-width:768px) {
+    #page-wrapper {
+        margin: 0 0 0 0px;
+        padding: 0;
+    }
+
+
+
+    #header_card p {
+        font-size: 40px;
+        color: white;
+    }
+}
+
+/* MAX WIDTHS: LARGE SCREEN---------------------------------------------------*/
+
+@media(max-width:1810px) {
+
+    #page-index {
+        min-height: 1000px;
+    }
+
+    #dashboard_card {
+        height: 240px;
+        width: 240px;
+    }
+
+
+}
+
+@media(max-width:1381px) {
+
+    #page-wrapper {
+        margin: 0 0 0 0px;
+    }
+    #page-index {
+        min-height: 800px;
+    }
+
+
+
+}
+
+/* MAX WIDTHS: MEDIUM SCREEN---------------------------------------------------*/
+
+@media(max-width:1200px) {
+    #page-wrapper {
+        position: relative;
+        top: 50px;
+    }
+    #page-index {
+        min-height: 800px;
+    }
+    .row {
+        margin-bottom: 10px;
+    }
+
+    #title_card p {
+        font-size: 24px;
+        font-weight: bold;
+        padding: 17px;
+    }
+
+
+    th,
+    tr {
+        font-size: 12px;
+    }
+}
+
+@media(max-width:1056px) {
+
+    #page-wrapper {
+        position: relative;
+        top: 40px;
+    }
+    #page-index {
+        min-height: 800px;
+    }
+
+
+
+}
+
+@media(max-width:993px) {
+    #page-wrapper {
+        position: relative;
+        top: 70px;
+    }
+    #page-index {
+        min-height: 1200px;
+    }
+
+
+
+}
+
+@media(max-width:959px) {
+
+}
+
+/* MAX WIDTHS: SMALL SCREEN---------------------------------------------------*/
+
+@media(max-width:767px) {
+    #page-wrapper {
+        position: relative;
+        top: 90px;
+        margin: 0 0 0 0px;
+    }
+    #page-index {
+        min-height: 1600px;
+    }
+
+}
+
+/* MAX WIDTHS: EXTRA-SMALL SCREEN---------------------------------------------*/
+
+@media(max-width:521px) {
+    #page-wrapper {
+        position: relative;
+        top: 100px;
+    }
+    #page-index {
+        min-height: 1400px;
+    }
+
+
+    .card-panel {
+        font-size: 12px;
+        font-weight: bold;
+        border-radius: 15px;
+    }
+
+    .input-field .prefix~input {
+        width: 80%;
+        margin-top: 5px;
+    }
+    .prefix~.select-wrapper {
+        width: 70%;
+    }
+}
+
+
+@media(max-width:480px) {
+
+    #page-wrapper {
+        position: relative;
+        top: 100px;
+    }
+
+
+
+}
+
+@media(max-width:376px) {
+    #page-wrapper {
+        position: relative;
+        top: 80px;
+        margin-left: 0px;
+    }
+
+
+    th,
+    tr {
+        font-size: 9px;
+    }
+}
