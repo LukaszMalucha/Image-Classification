@@ -1,2 +1,6 @@
 static/* linguist-vendored
 templates/* linguist-vendored
+rest_app/* linguist-vendored
+project/cat_dog_classifier/templates/* linguist-vendored
+project/digit_recognition/templates/* linguist-vendored
+project/classify_image/templates/* linguist-vendored

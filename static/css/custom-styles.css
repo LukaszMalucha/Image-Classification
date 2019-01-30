@@ -8,12 +8,15 @@ body {
     margin: 0;
     padding-bottom: 0;
     min-height: 100%;
-    background-color: #f9f9f9;
+    background-image: url('../../static/img/background.png');
+    background-size: cover;
+
 }
 
 html {
     height: 100%;
     box-sizing: border-box;
+
 }
 
 
@@ -26,14 +29,15 @@ html {
     position: relative;
     top: 55px;
     -moz-box-shadow: 0 0 10px #757575;
-    background-image: url('../../static/img/nice.png');
-    background-size: cover;
+
 }
 
 #page-index {
     width: 100%;
     margin: 10px 20px 10px 0px;
     padding: 15px 30px;
+    padding-left: 15%;
+    padding-right: 15%;
 
 }
 
@@ -47,10 +51,9 @@ html {
     text-align: center;
 }
 
-.btn,
-.btn-large {
+.btn {
     color: white;
-    background-color: #6ba546;
+    background-color: #4e79a7;
     border: none;
     width: 200px;
     margin: 0;
@@ -62,12 +65,11 @@ html {
     line-height: 25px;
 }
 
-.btn-large:hover,
-.btn-large:focus,
+
 .btn:hover,
 .btn:focus {
-    background-color: #4b7331;
-    color: white;
+    background-color: white;
+    color: #4e79a7;
 }
 
 
@@ -75,18 +77,6 @@ html {
     color: black;
 }
 
-.col-md-8,
-.col-md-3,
-.col-md-4,
-.col-md-6 {
-    padding-right: 0px;
-}
-
-
-.small-name a {
-    color: #8B0000;
-
-}
 
 label {
     margin-left: 30px;
@@ -96,168 +86,19 @@ label {
 }
 
 
-
-
-
-h6 {
-    color: black;
-}
-
-
-/*------------------------------------------------------------------------------
-    TOP NAVBAR    
-------------------------------------------------------------------------------*/
-
-.top-navbar {
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    z-index: 300;
-    background: #353535;
-    border-bottom: none;
-    padding-right: 10px;
-    box-shadow: 1px solid rgba(0, 0, 0, 0.25);
-}
-
-.navbar-brand i.large.material-icons {
-    float: left;
-    font-size: 31px;
-    margin-right: 6px;
-}
-
-.navbar-brand {
-    margin-top: 0px;
-}
-
-.top-navbar .navbar-brand {
-    color: white;
-    width: 400px;
-    text-align: left;
-    height: 60px;
-    padding: 15px 0px;
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 30px;
-    background: #353535;
-    border-radius: 15px;
-}
-
-.top-navbar .nav>li {
-    position: relative;
-    display: inline-block;
-    margin: 0px;
-    padding: 0px;
-    border-radius: 15px;
-}
-
-.top-navbar .nav>li>a {
-    position: relative;
-    display: block;
-    padding: 17px;
-    color: #ffffff;
-    margin: 0px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    border-radius: 15px;
-}
-
-.top-navbar .nav>li>a>i {
-    margin-right: 0;
-}
-
-.navbar-brand i.large.material-icons {
-    float: left;
-    font-size: 34px;
-    margin-right: 6px;
-}
-
-.navbar-default .navbar-brand:hover {
-    color: white;
-}
-
-.navbar-default .navbar-brand:focus {
-    color: white;
-    background-color: #29abe2;
-}
-
-.top-navbar .nav>li>a b {
-    margin: 0 5px;
-}
-
-#top_icon {
-    color: #8B0000;
-}
-
-.top-navbar .dropdown-menu {
-    min-width: 230px;
-    border-radius: 0 0 4px 4px;
-    border: 0;
-}
-
-
-
-/* Hovers and Focuses --------------------------------------------------------*/
-
-.top-navbar .nav>li>a:hover,
-.top-navbar .nav>li>a:focus {
-    text-decoration: none;
-    background-color: #e0e8f5;
-    color: #f2f2f2;
-}
-
-.nav .open>a,
-.nav .open>a:hover,
-.nav .open>a:focus {
-    background-color: #075CB3;
-    border-color: #075CB3;
-
-}
-
-.top-navbar .nav>li>a:hover,
-.top-navbar .nav>li>a:focus {
-    text-decoration: none;
-    background: white;
-    outline: 0px;
-
-}
-
-.top-navbar .dropdown-menu>li>a:hover,
-.top-navbar .dropdown-menu>li>a:focus {
-    color: #f2f2f2;
-    background: none;
-}
-
-.navbar-default .navbar-brand:hover {
-
-    font-size: 30px;
-}
-
-.top-navbar .navbar-brand:hover {
-    background: none;
-    outline: 0px;
-}
-
-
-.fa-th-list,
-.fa-python,
-.fa-file,
-.material-icons {
-
-    margin-right: 2px;
-
-}
-
 /*------------------------------------------------------------------------------
     DASHBOARD CARDS    
 ------------------------------------------------------------------------------*/
 
 #main_card {
-
     vertical-align: middle;
     border-width: 3px;
     padding: 20px;
     box-shadow: none;
     background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
 }
 
 
@@ -269,35 +110,7 @@ h6 {
     margin-bottom: 20px;
 }
 
-#main_card h3,
-h2 {
-    color: black;
-    font-size: 20px;
-    margin: 5px;
-}
 
-#main_card h4 {
-    color: black;
-    margin: 5px;
-}
-
-#main_card h5 {
-    color: black;
-    font-size: 12px;
-    color: #4b5964;
-    margin: 5px;
-}
-
-
-#dashboard_card {
-    float: left;
-    height: 240px;
-    width: 240px;
-    margin-left: 40px;
-    border: 1px solid #C0C0C0;
-    padding: 0px;
-
-}
 
 .card .card-image .card-title {
     color: black;
@@ -309,7 +122,6 @@ h2 {
 
 #menu-card {
     box-shadow: 0 3px 3px 0 #A9A9A9, 0 3px 1px -2px #A9A9A9, 0 1px 5px 0 #A9A9A9;
-    margin-right: 50px;
 }
 
 
@@ -335,12 +147,9 @@ h2 {
     border-width: 3px;
     border-radius: 10px;
     padding: 10px;
-
     background-image: linear-gradient(to bottom right, #fafafa, white);
-    min-height: 240px;
+    min-height: 300px;
 }
-
-
 
 #form-card h3 {
     font-weight: bold;
@@ -354,8 +163,7 @@ h2 {
     vertical-align: middle;
     padding: 20px;
     margin: 0px;
-    height: 506px;
-    width: 506px;
+    height: 400px;
     padding: 0px;
 }
 
@@ -384,6 +192,21 @@ h2 {
     min-height: 300px;
     min-width: 500px;
     padding: 20px;
+}
+
+#navigation {
+    width: 15%;
+    height: 45px;
+    padding: 10px;
+    font-size: 14px;
+    background-color: #1a2026;
+}
+
+#navigation:hover,
+#navigation:active,
+#navigation:focus {
+    color: #1a2026;
+    background-color: white;
 }
 
 
@@ -467,18 +290,7 @@ input[type="number"] {
 /* MIN WIDTHS ----------------------------------------------------------------*/
 
 @media(min-width:1811px) {
-    #page-index {
-        min-height: 1000px;
-    }
-    #page-selection {
-        min-height: 1400px;
-    }
-    #page-algorithm {
-        min-height: 1600px;
-    }
-    #page-projects {
-        min-height: 1400px;
-    }
+
 }
 
 @media(min-width:768px) {
@@ -487,12 +299,8 @@ input[type="number"] {
         padding: 0;
     }
 
-    .sidebar-collapse>.nav>li>a {
-        padding: 14px 14px 14px 20px;
-    }
-    .navbar {
-        border-radius: 0px;
-    }
+
+
     #header_card p {
         font-size: 40px;
         color: white;
@@ -503,27 +311,11 @@ input[type="number"] {
 
 @media(max-width:1810px) {
 
-    #page-index {
-        min-height: 1000px;
-    }
-
-    #dashboard_card {
-        height: 240px;
-        width: 240px;
-    }
 
 
 }
 
 @media(max-width:1381px) {
-
-    #page-wrapper {
-        margin: 0 0 0 0px;
-    }
-    #page-index {
-        min-height: 800px;
-    }
-
 
 
 }
@@ -531,175 +323,37 @@ input[type="number"] {
 /* MAX WIDTHS: MEDIUM SCREEN---------------------------------------------------*/
 
 @media(max-width:1200px) {
-    #page-wrapper {
-        position: relative;
-        top: 50px;
-    }
-    #page-index {
-        min-height: 800px;
-    }
-    .row {
-        margin-bottom: 10px;
-    }
-    .navbar-side {
-        top: 55px;
-    }
-    .top-navbar .nav>li>a {
-        padding: 16px;
-        font-size: 16px;
-    }
-    #title_card p {
-        font-size: 24px;
-        font-weight: bold;
-        padding: 17px;
-    }
 
-
-    th,
-    tr {
-        font-size: 12px;
-    }
 }
 
 @media(max-width:1056px) {
-
-    #page-wrapper {
-        position: relative;
-        top: 40px;
-    }
-    #page-index {
-        min-height: 800px;
-    }
-
-    .top-navbar .nav>li>a {
-        padding: 16px;
-        font-size: 16px;
-    }
-
-
 
 
 }
 
 @media(max-width:993px) {
-    #page-wrapper {
-        position: relative;
-        top: 70px;
-    }
-    #page-index {
-        min-height: 1200px;
-    }
-
 
 
 }
 
 @media(max-width:959px) {
 
-    .top-navbar {
-        padding-right: 2px;
-    }
-}
 
-/* MAX WIDTHS: SMALL SCREEN---------------------------------------------------*/
-
-@media(max-width:767px) {
-    #page-wrapper {
-        position: relative;
-        top: 90px;
-        margin: 0 0 0 0px;
-    }
-    #page-index {
-        min-height: 1600px;
-    }
-    #top_icon {
-        font-size: 0px;
-    }
-    .top-navbar .nav>li>a {
-        padding: 8px;
-        font-size: 14px;
-        color: #8B0000;
-    }
-
-
-}
 
 /* MAX WIDTHS: EXTRA-SMALL SCREEN---------------------------------------------*/
 
 @media(max-width:521px) {
-    #page-wrapper {
-        position: relative;
-        top: 100px;
-    }
-    #page-index {
-        min-height: 1400px;
-    }
-
-    .top-navbar .nav>li>a {
-        padding: 8px;
-        font-size: 12px;
-        color: #8B0000;
-    }
-
-
-    .card-panel {
-        font-size: 12px;
-        font-weight: bold;
-        border-radius: 15px;
-    }
-
-    .input-field .prefix~input {
-        width: 80%;
-        margin-top: 5px;
-    }
-    .prefix~.select-wrapper {
-        width: 70%;
+    .card .card-title {
+        font-size: 20px;
     }
 }
 
 
 @media(max-width:480px) {
 
-    #page-wrapper {
-        position: relative;
-        top: 100px;
-    }
-
-    .top-navbar .material-icons {
-        font-size: 20px;
-    }
-    .top-navbar .nav>li>a {
-        padding: 6px;
-        font-size: 10px;
-    }
 
 }
 
 @media(max-width:376px) {
-    #page-wrapper {
-        position: relative;
-        top: 80px;
-        margin-left: 0px;
-    }
 
-    .top-navbar .nav>li>a {
-        padding: 4px 0px 4px 0px;
-        font-size: 10px;
-    }
-    .top-navbar .material-icons {
-        font-size: 14px;
-    }
-
-    th,
-    tr {
-        font-size: 9px;
-    }
-}
-
-@media(max-width:321px) {
-
-    .top-navbar .nav>li>a {
-        padding: 10px 0px 10px 0px;
-        font-size: 10px;
-    }
 }

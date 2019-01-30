@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Image Classification</title>
+    <!-- Material Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Materialize-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Bootstrap-->
+    <link href="{{url_for('static', filename='css/bootstrap.css')}}" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <!-- Custom Styles-->
+    <link href="{{url_for('static', filename='css/custom-styles.css')}}" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Chart Js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <!-- File Saver-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
+    <!-- jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+
+
+
+<body>
+    <!-- WRAPPER -->
+    <div id="wrapper">
+
+
+        <!-- TOP NAVBAR -->
+        <nav class="navbar navbar-default top-navbar">
+            <div class="col-md-5 text-center"></div>
+            <div class="col-md-2 text-center">
+                <a class="navbar-brand waves-effect waves-dark" href="{{url_for('dashboard')}}"><i class="fas fa-images"></i><strong> Image Recognition</strong></a>
+            </div>
+            <div class="col-md-5 text-center"></div>
+        </nav>
+
+        <!--/. TOP NAVBAR ****************************************************************************************************************************************************************************************** -->
+
+        <!-- PAGE-WRAPPER -->
+        <div id="page-wrapper">
+            <!-- PAGE-INDEX -->
+            <div id="page-index">
+                <div class="dashboard-cards">
+                    {% block content %} {% endblock %}
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+        <!-- PAGE-INDEX -->
+
+    </div>
+
+    <!-- PAGE-WRAPPER -->
+
+    <!-- WRAPPER -->
+    <!-- Materialize Js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+    <!-- Materialize Js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Bootstrap Js -->
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('select').formSelect();
+        });
+        $(document).ready(function() {
+            $('.datepicker').datepicker();
+        });
+    </script>
+
+
+</body>
+
+</html>

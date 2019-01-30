@@ -13,6 +13,8 @@ dominate==2.3.5
 Flask==1.0.2
 Flask-Bootstrap==3.3.7.1
 Flask-RESTful==0.3.6
+Flask-SQLAlchemy==2.3.2
+Flask-WTF==0.14.2
 Flask-Uploads==0.2.1
 gast==0.2.0
 grpcio==1.16.1
