@@ -289,71 +289,11 @@ input[type="number"] {
 
 /* MIN WIDTHS ----------------------------------------------------------------*/
 
-@media(min-width:1811px) {
-
-}
-
-@media(min-width:768px) {
-    #page-wrapper {
-        margin: 0 0 0 0px;
-        padding: 0;
-    }
-
-
-
-    #header_card p {
-        font-size: 40px;
-        color: white;
-    }
-}
-
-/* MAX WIDTHS: LARGE SCREEN---------------------------------------------------*/
-
-@media(max-width:1810px) {
-
-
-
-}
-
-@media(max-width:1381px) {
-
-
-}
-
-/* MAX WIDTHS: MEDIUM SCREEN---------------------------------------------------*/
-
-@media(max-width:1200px) {
-
-}
-
-@media(max-width:1056px) {
-
-
-}
-
 @media(max-width:993px) {
+    #navigation {
+        width: 60%;
 
-
-}
-
-@media(max-width:959px) {
-
-
-
-/* MAX WIDTHS: EXTRA-SMALL SCREEN---------------------------------------------*/
-
-@media(max-width:521px) {
-    .card .card-title {
-        font-size: 20px;
     }
-}
-
-
-@media(max-width:480px) {
-
 
 }
 
-@media(max-width:376px) {
-
-}
