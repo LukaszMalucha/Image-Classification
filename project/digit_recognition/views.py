@@ -22,7 +22,7 @@ from project.digit_recognition.load import init_model
 sys.path.append(os.path.abspath(",/model"))
 
 global model, graph
-model, graph = init_model()
+
 
 
 ## Image Converter from str to b64
@@ -50,6 +50,8 @@ def digit_recognition():
 
 @digit_recognition_blueprint.route('/predict', methods=['GET', 'POST'])
 def predict():
+    
+    model, graph = init_model()
     imgData = request.get_data()
 
     ## transform
