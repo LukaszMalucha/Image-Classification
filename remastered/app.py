@@ -4,6 +4,7 @@ import env
 from db import db
 
 from flask import Flask, render_template, session
+from flask_uploads import UploadSet, configure_uploads, IMAGES
 from flask_bootstrap import Bootstrap
 
 
@@ -15,16 +16,28 @@ app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('SQLALCHEMY_DATABASE_URI')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['PROPAGATE_EXCEPTIONS'] = True
-
+app.config['UPLOADED_PHOTOS_DEST'] = 'static/uploads'
 app.config['DEBUG'] = True
 
 Bootstrap(app)
 
+
+## Image upload handling - Cat & Dog Classifier
+photos = UploadSet('photos', IMAGES)                                            ## image upload handling
+configure_uploads(app, photos)
+ALLOWED_EXTENSIONS = set(['jpg'])
+
+
+
 from project.users.views import users_blueprint
 from project.digit_recognition.views import digit_recognition_blueprint
+from project.cat_dog_classifier.views import cat_dog_classifier_blueprint
 
 app.register_blueprint(users_blueprint)
 app.register_blueprint(digit_recognition_blueprint)
+app.register_blueprint(cat_dog_classifier_blueprint)
+
+
 
 ## User Login ######################### ########################################################
 @app.context_processor
@@ -44,7 +57,7 @@ def error500(error):
 
 
 @app.route('/')
-def home():
+def dashboard():
     return render_template('dashboard.html')
 
 

@@ -1,0 +1,186 @@
+/*------------------------------------------------------------------------------
+    MAIN  STYLES
+------------------------------------------------------------------------------*/
+
+.btn,
+.btn-large {
+    color: white;
+    background-color: #4e79a7;
+    border-radius: 5px;
+    width: 160px;
+    display: block;
+    margin: 0;
+    font-weight: bold;
+
+    font-size: 16px;
+}
+
+.btn {
+    line-height: 25px;
+}
+
+.btn-large:hover,
+.btn-large:focus,
+.btn:hover,
+.btn:focus {
+    background-color: white;
+    color: #4e79a7;
+}
+
+
+/*------------------------------------------------------------------------------
+    DASHBOARD CARDS
+------------------------------------------------------------------------------*/
+
+
+#main_card h1 {
+    color:  black;
+    font-size: 28px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+
+
+#pet {
+    box-shadow: 1px 1px black;
+}
+
+#form-upload {
+    vertical-align: middle;
+    border-width: 3px;
+    border-radius: 10px;
+    padding: 10px;
+    background-image: linear-gradient(to bottom right, #fafafa, white);
+    min-height: 140px;
+
+}
+
+#form-upload h3 {
+    font-weight: bold;
+}
+
+
+
+
+/*------------------------------------------------------------------------------
+    MEDIA QUERIES
+------------------------------------------------------------------------------*/
+
+/* MIN WIDTHS ----------------------------------------------------------------*/
+
+@media(min-width:1811px) {
+
+}
+
+@media(min-width:768px) {
+
+    #header_card p {
+        font-size: 40px;
+        color: white;
+    }
+}
+
+/* MAX WIDTHS: LARGE SCREEN---------------------------------------------------*/
+
+@media(max-width:1810px) {
+
+
+
+}
+
+@media(max-width:1381px) {
+
+
+
+}
+
+/* MAX WIDTHS: MEDIUM SCREEN---------------------------------------------------*/
+
+@media(max-width:1200px) {
+
+    #title_card p {
+        font-size: 24px;
+        font-weight: bold;
+        padding: 17px;
+    }
+
+    th,
+    tr {
+        font-size: 12px;
+    }
+}
+
+@media(max-width:1056px) {
+
+
+    .top-navbar .nav>li>a {
+        padding: 16px;
+        font-size: 16px;
+    }
+
+
+
+}
+
+@media(max-width:993px) {
+
+
+
+
+}
+
+@media(max-width:959px) {
+
+    .top-navbar {
+        padding-right: 2px;
+    }
+}
+
+/* MAX WIDTHS: SMALL SCREEN---------------------------------------------------*/
+
+@media(max-width:767px) {
+
+
+
+}
+
+/* MAX WIDTHS: EXTRA-SMALL SCREEN---------------------------------------------*/
+
+@media(max-width:521px) {
+
+
+    .card-panel {
+        font-size: 12px;
+        font-weight: bold;
+        border-radius: 15px;
+    }
+
+    .input-field .prefix~input {
+        width: 80%;
+        margin-top: 5px;
+    }
+    .prefix~.select-wrapper {
+        width: 70%;
+    }
+}
+
+
+@media(max-width:480px) {
+
+
+
+}
+
+@media(max-width:376px) {
+
+
+    th,
+    tr {
+        font-size: 9px;
+    }
+}
+
+@media(max-width:321px) {
+
+}
