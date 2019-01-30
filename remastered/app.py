@@ -4,10 +4,8 @@ import env
 from db import db
 
 from flask import Flask, render_template, session
-from flask_restful import Api
 from flask_bootstrap import Bootstrap
 
-from resources.user import UserRegister, UserLogin, UserLogout
 
 
 ## App Settings
@@ -19,23 +17,20 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['PROPAGATE_EXCEPTIONS'] = True
 
 app.config['DEBUG'] = True
-api = Api(app)
+
 Bootstrap(app)
 
-
-## Register Resources
-api.add_resource(UserRegister, '/register')
-api.add_resource(UserLogin, '/login')
-api.add_resource(UserLogout, '/logout')
+from project.users.views import users_blueprint
 
 
-## User Login
+app.register_blueprint(users_blueprint)
+
+
+## User Login ######################### ########################################################
 @app.context_processor
 def context_processor():
     current_user = session.get('current_user') or 'Guest'
     return dict(current_user=current_user)
-
-
 
 
 @app.errorhandler(404)

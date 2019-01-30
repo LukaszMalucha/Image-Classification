@@ -46,11 +46,11 @@
 
                 <!-- DROPDOWN -->
         <ul id="dropdown1" class="dropdown-content">
-            <li><a href="{{ url_for('userlogin') }}" id="dropdown_link"><i class="fa fa-user fa-fw" style="color: #d6d5d5"></i> Log In</a>
+            <li><a href="{{ url_for('users.login') }}" id="dropdown_link"><i class="fa fa-user fa-fw" style="color: #d6d5d5"></i> Log In</a>
             </li>
-            <li><a href="{{ url_for('userlogout') }}" id="dropdown_link"><i class="fas fa-sign-out-alt" style="color: #d6d5d5"></i> Log Out</a>
+            <li><a href="{{ url_for('users.logout') }}" id="dropdown_link"><i class="fas fa-sign-out-alt" style="color: #d6d5d5"></i> Log Out</a>
             </li>
-            <li><a href="{{ url_for('userregister') }}" id="dropdown_link"><i class="fas fa-tasks" style="color: #d6d5d5"></i> Sign In</a>
+            <li><a href="{{ url_for('users.register') }}" id="dropdown_link"><i class="fas fa-tasks" style="color: #d6d5d5"></i> Sign In</a>
             </li>
         </ul>
 
@@ -89,16 +89,6 @@
         <!-- Materialize Js -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-
-
-
-        <script src="{{url_for('static', filename='js/dataTables/jquery.dataTables.js')}}"></script>
-        <script src="{{url_for('static', filename='js/dataTables/dataTables.bootstrap.js')}}"></script>
-        <script>
-            $(document).ready(function() {
-                $('#dataTables-example').dataTable();
-            });
-        </script>
         <script>
             $('.dropdown-trigger').dropdown();
         </script>

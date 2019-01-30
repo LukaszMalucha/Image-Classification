@@ -111,34 +111,6 @@ label {
 }
 
 
-h2 {
-    color: black;
-    font-size: 20px;
-    margin: 5px;
-}
-
-#main_card h4 {
-    color: black;
-    margin: 5px;
-}
-
-#main_card h5 {
-    color: black;
-    font-size: 12px;
-    color: #4b5964;
-    margin: 5px;
-}
-
-
-#dashboard_card {
-    float: left;
-    height: 240px;
-    width: 240px;
-    margin-left: 40px;
-    border: 1px solid #C0C0C0;
-    padding: 0px;
-
-}
 
 .card .card-image .card-title {
     color: black;
@@ -150,7 +122,6 @@ h2 {
 
 #menu-card {
     box-shadow: 0 3px 3px 0 #A9A9A9, 0 3px 1px -2px #A9A9A9, 0 1px 5px 0 #A9A9A9;
-    margin-right: 50px;
 }
 
 
@@ -305,18 +276,7 @@ input[type="number"] {
 /* MIN WIDTHS ----------------------------------------------------------------*/
 
 @media(min-width:1811px) {
-    #page-index {
-        min-height: 1000px;
-    }
-    #page-selection {
-        min-height: 1400px;
-    }
-    #page-algorithm {
-        min-height: 1600px;
-    }
-    #page-projects {
-        min-height: 1400px;
-    }
+
 }
 
 @media(min-width:768px) {
@@ -337,27 +297,11 @@ input[type="number"] {
 
 @media(max-width:1810px) {
 
-    #page-index {
-        min-height: 1000px;
-    }
-
-    #dashboard_card {
-        height: 240px;
-        width: 240px;
-    }
 
 
 }
 
 @media(max-width:1381px) {
-
-    #page-wrapper {
-        margin: 0 0 0 0px;
-    }
-    #page-index {
-        min-height: 800px;
-    }
-
 
 
 }
@@ -365,124 +309,37 @@ input[type="number"] {
 /* MAX WIDTHS: MEDIUM SCREEN---------------------------------------------------*/
 
 @media(max-width:1200px) {
-    #page-wrapper {
-        position: relative;
-        top: 50px;
-    }
-    #page-index {
-        min-height: 800px;
-    }
-    .row {
-        margin-bottom: 10px;
-    }
 
-    #title_card p {
-        font-size: 24px;
-        font-weight: bold;
-        padding: 17px;
-    }
-
-
-    th,
-    tr {
-        font-size: 12px;
-    }
 }
 
 @media(max-width:1056px) {
-
-    #page-wrapper {
-        position: relative;
-        top: 40px;
-    }
-    #page-index {
-        min-height: 800px;
-    }
-
 
 
 }
 
 @media(max-width:993px) {
-    #page-wrapper {
-        position: relative;
-        top: 70px;
-    }
-    #page-index {
-        min-height: 1200px;
-    }
-
 
 
 }
 
 @media(max-width:959px) {
 
-}
 
-/* MAX WIDTHS: SMALL SCREEN---------------------------------------------------*/
-
-@media(max-width:767px) {
-    #page-wrapper {
-        position: relative;
-        top: 90px;
-        margin: 0 0 0 0px;
-    }
-    #page-index {
-        min-height: 1600px;
-    }
-
-}
 
 /* MAX WIDTHS: EXTRA-SMALL SCREEN---------------------------------------------*/
 
 @media(max-width:521px) {
-    #page-wrapper {
-        position: relative;
-        top: 100px;
-    }
-    #page-index {
-        min-height: 1400px;
-    }
-
-
-    .card-panel {
-        font-size: 12px;
-        font-weight: bold;
-        border-radius: 15px;
-    }
-
-    .input-field .prefix~input {
-        width: 80%;
-        margin-top: 5px;
-    }
-    .prefix~.select-wrapper {
-        width: 70%;
+    .card .card-title {
+        font-size: 20px;
     }
 }
 
 
 @media(max-width:480px) {
 
-    #page-wrapper {
-        position: relative;
-        top: 100px;
-    }
-
-
 
 }
 
 @media(max-width:376px) {
-    #page-wrapper {
-        position: relative;
-        top: 80px;
-        margin-left: 0px;
-    }
 
-
-    th,
-    tr {
-        font-size: 9px;
-    }
 }
