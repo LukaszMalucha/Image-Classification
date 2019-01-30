@@ -21,10 +21,10 @@ app.config['DEBUG'] = True
 Bootstrap(app)
 
 from project.users.views import users_blueprint
-
+from project.digit_recognition.views import digit_recognition_blueprint
 
 app.register_blueprint(users_blueprint)
-
+app.register_blueprint(digit_recognition_blueprint)
 
 ## User Login ######################### ########################################################
 @app.context_processor
