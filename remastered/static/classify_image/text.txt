@@ -1,1 +1,0 @@
-{"English foxhound": 0.4968310594558716, "Walker hound, Walker foxhound": 0.1267831176519394, "beagle": 0.043130017817020416, "Rhodesian ridgeback": 0.011317345313727856, "Ibizan hound, Ibizan Podenco": 0.011032221838831902}

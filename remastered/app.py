@@ -6,10 +6,10 @@ from db import db
 from flask import Flask, render_template, session
 from flask_uploads import UploadSet, configure_uploads, IMAGES
 from flask_bootstrap import Bootstrap
-
-
+from flask_restful import Api
 
 ## App Settings
+from project.classify_image.resources import ImageClassify
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
@@ -18,7 +18,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['PROPAGATE_EXCEPTIONS'] = True
 app.config['UPLOADED_PHOTOS_DEST'] = 'static/uploads'
 app.config['DEBUG'] = True
-
+api = Api(app)
 Bootstrap(app)
 
 
@@ -28,18 +28,27 @@ configure_uploads(app, photos)
 
 
 
+api.add_resource(ImageClassify, '/imageclassify')
+
+
+
 
 from project.users.views import users_blueprint
 from project.digit_recognition.views import digit_recognition_blueprint
 from project.cat_dog_classifier.views import cat_dog_classifier_blueprint
+from project.classify_image.views import classify_image_blueprint
 
 app.register_blueprint(users_blueprint)
 app.register_blueprint(digit_recognition_blueprint)
 app.register_blueprint(cat_dog_classifier_blueprint)
+app.register_blueprint(classify_image_blueprint)
+
+
 
 
 
 ## User Login ######################### ########################################################
+
 @app.context_processor
 def context_processor():
     current_user = session.get('current_user') or 'Guest'
