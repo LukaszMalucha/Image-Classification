@@ -42,7 +42,7 @@ def login():
         if user:
             if check_password_hash(user.password, form.password.data):
                 session['current_user'] = user.username
-                return redirect(url_for('algorithms.digit_recognition'))
+                return redirect(url_for('digit_recognition.digit_recognition'))
 
         return render_template('login.html', form=form, message="Invalid Username or Password")
 

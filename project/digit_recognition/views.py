@@ -50,7 +50,6 @@ def digit_recognition():
 
 @digit_recognition_blueprint.route('/predict', methods=['GET', 'POST'])
 def predict():
-    
     model, graph = init_model()
     imgData = request.get_data()
 
