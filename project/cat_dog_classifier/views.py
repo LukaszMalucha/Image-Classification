@@ -1,7 +1,6 @@
 from flask import request, Blueprint
 from flask import render_template, request
 
-
 import numpy as np
 import keras
 from keras.models import load_model
@@ -10,8 +9,6 @@ from skimage.io import imread
 from skimage.transform import resize
 import os.path
 
-
-
 ## BLUEPRINT INIT
 
 cat_dog_classifier_blueprint = Blueprint(
@@ -19,10 +16,10 @@ cat_dog_classifier_blueprint = Blueprint(
     template_folder="templates"
 )
 
-
 ## DEFINE ALLOWED TEMPLATE FILE FORMAT ##############################################
 
 ALLOWED_EXTENSIONS = set(['jpg'])
+
 
 def allowed_file(filename):
     return '.' in filename and \
@@ -41,10 +38,8 @@ cat_dog_classifier = os.path.join(my_path, "../../static/cat_dog_classifier/cat_
 ### MAIN PAGE
 
 
-
 @cat_dog_classifier_blueprint.route('/classifier', methods=['GET', 'POST'])
 def classifier():
-
     return render_template("cat_dog_classifier.html")
 
 

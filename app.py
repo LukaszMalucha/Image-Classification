@@ -1,6 +1,6 @@
 ## App Utilities
 import os
-# import env
+import env
 from db import db
 
 from flask import Flask, render_template, session

@@ -65,20 +65,35 @@ Heroku-hosted web application was built with Flask framework, Ajax & FileSaver.
 
 <br>
 
-![33](https://user-images.githubusercontent.com/26208598/49669690-09031e00-fa5a-11e8-9d89-1d9e32faefb7.PNG)
+![img](https://user-images.githubusercontent.com/26208598/51791899-2fb01c00-21a2-11e9-9c92-ac9ab23d9e1a.JPG)
 
 
 <br>
+
+
+### Travis CI:
+
+[![Build Status](https://travis-ci.com/LukaszMalucha/Image-Classification.svg?branch=master)](https://travis-ci.com/LukaszMalucha/Image-Classification)
+
+### Test Files:
+
+##### /tests
 
 
 
 ## TOOLS, MODULES & TECHNIQUES:
 
 ##### Web Development:
-Flask | Flask_Restful | Ajax | FileSaver.js | HTML | CSS | Bootstrap | Materialize
+Flask | Flask_Restful | Ajax | FileSaver.js | HTML | CSS | Bootstrap | Materialize | Docker 
 
 ##### Python – CNN:
 Keras | Tensorflow | Scipy | Numpy | h5py | Scikit-Image
+
+##### Database Development:
+SQLite
+
+##### Testing
+selenium | unittest
 
 <br>
 
