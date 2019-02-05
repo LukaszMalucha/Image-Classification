@@ -2,6 +2,7 @@ absl-py==0.6.1
 aniso8601==4.0.1
 astor==0.7.1
 backcall==0.1.0
+behave==1.2.6
 certifi==2018.10.15
 chardet==3.0.4
 Click==7.0
@@ -50,6 +51,7 @@ PyYAML==4.2b1
 requests==2.20.1
 scikit-image==0.14.1
 scipy==1.1.0
+selenium==3.141.0
 six==1.11.0
 tensorboard==1.10.0
 tensorflow==1.10.0

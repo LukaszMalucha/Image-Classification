@@ -8,9 +8,10 @@ from flask_uploads import UploadSet, configure_uploads, IMAGES
 from flask_bootstrap import Bootstrap
 from flask_restful import Api
 
-## App Settings
 from project.classify_image.resources import ImageClassify
 
+
+## App Settings
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('SQLALCHEMY_DATABASE_URI')
