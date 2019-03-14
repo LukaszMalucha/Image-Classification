@@ -3,7 +3,7 @@
 ------------------------------------------------------------------------------*/
 
 .btn,
-.btn-large {
+.btn-predict {
     color: white;
     background-color: #4e79a7;
     border-radius: 5px;
@@ -11,16 +11,17 @@
     display: block;
     margin: 0;
     font-weight: bold;
-
-    font-size: 16px;
+    height: 40px;
+    padding: 5px;
+    font-size: 20px;
 }
 
 .btn {
     line-height: 25px;
 }
 
-.btn-large:hover,
-.btn-large:focus,
+.btn-predict:hover,
+.btn-predict:focus,
 .btn:hover,
 .btn:focus {
     background-color: white;

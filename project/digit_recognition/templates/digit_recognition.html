@@ -43,7 +43,7 @@
                 </div></div>
 
             <div class="col-md-2 column-predict">
-            <a id="predict" class="waves-effect waves-light btn-large">Predict</a>
+            <a id="predict" class="waves-effect waves-light btn-predict">Predict</a>
 
         </div>
         <div class="col-md-3 text-center">
@@ -63,10 +63,10 @@
 
 </div>
 <br><br>
-<div class="row text-center">
-
-        <a href="{{ url_for('dashboard') }}" class="waves-effect waves-light btn" id="navigation">Back to Main Page</a>
-
+<div class="fixed-action-btn">
+    <a class="btn-floating btn-large" href="{{url_for('dashboard')}}">
+        <i class="large material-icons">exit_to_app</i>
+    </a>
 </div>
 
 

@@ -48,7 +48,7 @@
                     <div class="row text-center">
                         <div class="col-md-4 text-left"></div>
                         <div class="col-md-5 text-center">
-                            <input type="submit" class="waves-effect waves-light btn-large" value="Predict!">
+                            <input type="submit" class="waves-effect waves-light btn-predict" value="Predict!">
                         </div>
                         <div class="col-md-3 text-left"></div>
                     </div>
@@ -60,16 +60,11 @@
         <div class="col-md-3 text-left"></div>
     </div>
 
-    <br>
-    <div class="row text-center">
-        <div class="col-md-5 text-left"></div>
-        <div class="col-md-2 text-left">
-
-            <a href="{{ url_for('dashboard') }}" class="btn" id="navigation">Back to Main Page</a>
-
-        </div>
-        <div class="col-md-5 text-left"></div>
-    </div>
+<div class="fixed-action-btn">
+    <a class="btn-floating btn-large" href="{{url_for('dashboard')}}">
+        <i class="large material-icons">exit_to_app</i>
+    </a>
+</div>
 </div>
 
 

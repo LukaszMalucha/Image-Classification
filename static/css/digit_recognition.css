@@ -6,7 +6,7 @@
 
 #page-index {
     width: 100%;
-    margin: 10px 20px 10px 0px;
+    margin: 50px 20px 10px 0px;
     padding: 15px 30px;
 
 }
@@ -17,22 +17,23 @@
 }
 
 .btn,
-.btn-large {
+.btn-predict {
     color: white;
     background-color: #4e79a7;
     border-radius: 5px;
     width: 160px;
     font-weight: bold;
-    height: 70px;
-    padding: 10px;
+    height: 60px;
+    padding: 15px;
+    font-size: 20px;
 }
 
 .btn {
     line-height: 25px;
 }
 
-.btn-large:hover,
-.btn-large:focus,
+btn-predict:hover,
+btn-predict:focus,
 .btn:hover,
 .btn:focus {
     background-color: white;
@@ -232,7 +233,7 @@ input[type=text] {
         background:black;
     }
 
-    .btn-large {
+    .btn-predict {
         width: 120px
     }
 

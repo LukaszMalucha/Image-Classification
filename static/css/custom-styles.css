@@ -25,16 +25,10 @@ html {
 
 }
 
-#page-wrapper {
-    position: relative;
-    top: 55px;
-    -moz-box-shadow: 0 0 10px #757575;
-
-}
 
 #page-index {
     width: 100%;
-    margin: 10px 20px 10px 0px;
+    margin: 100px 20px 10px 0px;
     padding: 15px 30px;
     padding-left: 15%;
     padding-right: 15%;
@@ -210,6 +204,20 @@ label {
 }
 
 
+.btn-floating {
+    background: black;
+}
+
+.btn-floating i {
+    font-size: 24px;
+}
+
+.btn-floating:hover,
+.btn-floating:active {
+    background: #323232;
+}
+
+
 /*------------------------------------------------------------------------------
     EDIT & ADD FORMS + TABLE    
 ------------------------------------------------------------------------------*/
@@ -288,10 +296,22 @@ input[type="number"] {
 ------------------------------------------------------------------------------*/
 
 /* MIN WIDTHS ----------------------------------------------------------------*/
+@media(max-width:1600px) {
+
+.card .card-content .card-title {
+    font-size: 16px;
+}
+
+}
 
 @media(max-width:993px) {
     #navigation {
         width: 60%;
+
+    }
+
+    #menu-card {
+        margin-bottom: 40px;
 
     }
 
