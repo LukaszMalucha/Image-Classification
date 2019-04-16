@@ -1,6 +1,6 @@
 # Image Classifiers - Various Concepts
 
-#### [Visit the App](https://imageclassifiers.herokuapp.com/)
+#### [Visit the App](http://www.unflasked.com/)
 
 <br>
 
