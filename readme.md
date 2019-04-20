@@ -15,11 +15,6 @@ Third one, Digit Recognition, receives input via js.
 
 <br>
 
-![1](https://user-images.githubusercontent.com/26208598/56462832-c49d6c80-63c1-11e9-9108-fad52b36eb03.JPG)
-
-
-<br>
-
 
 ### Image Content Classification with Tensorflow
 
