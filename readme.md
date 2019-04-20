@@ -4,6 +4,10 @@
 
 <br>
 
+![1](https://user-images.githubusercontent.com/26208598/56462832-c49d6c80-63c1-11e9-9108-fad52b36eb03.JPG)
+
+<br>
+
 ## PROJECT OVERVIEW
 
 Flask RESTful Application hosting three different approaches to image recognition APIs. First, Image Content Classifier, takes image url path as an input. Second model works with .jpg image upload. 
@@ -11,7 +15,7 @@ Third one, Digit Recognition, receives input via js.
 
 <br>
 
-![1](https://user-images.githubusercontent.com/26208598/49669682-043e6a00-fa5a-11e8-8fe6-ea8d3846f829.PNG)
+![1](https://user-images.githubusercontent.com/26208598/56462832-c49d6c80-63c1-11e9-9108-fad52b36eb03.JPG)
 
 
 <br>
@@ -26,7 +30,7 @@ Application of Google-made image content classifier built with Tensorflow. Train
 
 <br>
 
-![11](https://user-images.githubusercontent.com/26208598/49669686-06082d80-fa5a-11e8-95d5-65dd79adc156.PNG)
+![2](https://user-images.githubusercontent.com/26208598/56462833-c49d6c80-63c1-11e9-97d0-5aac4af81aea.JPG)
 
 
 <br>
@@ -50,7 +54,7 @@ Image classifier trained to distinct between cats and dogs images. Convolutional
 
 <br>
 
-![22](https://user-images.githubusercontent.com/26208598/49669689-07395a80-fa5a-11e8-8df3-d13eb7c68153.PNG)
+![3](https://user-images.githubusercontent.com/26208598/56462834-c49d6c80-63c1-11e9-9234-6c322ab1fb30.JPG)
 
 
 <br>
@@ -65,7 +69,7 @@ Heroku-hosted web application was built with Flask framework, Ajax & FileSaver.
 
 <br>
 
-![img](https://user-images.githubusercontent.com/26208598/51791899-2fb01c00-21a2-11e9-9c92-ac9ab23d9e1a.JPG)
+![4](https://user-images.githubusercontent.com/26208598/56462835-c5360300-63c1-11e9-9997-e1aae9680370.JPG)
 
 
 <br>
