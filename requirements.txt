@@ -3,7 +3,7 @@ aniso8601==4.0.1
 astor==0.7.1
 backcall==0.1.0
 behave==1.2.6
-certifi==2018.10.15
+certifi==2022.12.7
 chardet==3.0.4
 Click==7.0
 cloudpickle==0.6.1
